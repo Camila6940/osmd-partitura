@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.6.1/build/opensheetmusicdisplay.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #osmd-container {
+            width: 90%;
+            height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div id="osmd-container"></div>
+    <script>
+        async function loadMusicXML() {
+            const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("osmd-container");
+            await osmd.load("Im_Just_Ken.mxl"); // Reemplaza con el nombre exacto de tu archivo .mxl
+            osmd.render();
+        }
+        loadMusicXML();
+    </script>
+</body>
+</html>
